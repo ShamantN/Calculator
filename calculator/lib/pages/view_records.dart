@@ -26,7 +26,7 @@ class _ViewRecordsState extends State<ViewRecords> {
         appBar: AppBar(
           title: const Text(
             "History",
-            style: TextStyle(color: Colors.white70),
+            style: TextStyle(color: Colors.white70, fontFamily: 'Helvetica'),
           ),
           leading: IconButton(
               onPressed: () {

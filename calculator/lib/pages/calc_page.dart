@@ -157,6 +157,7 @@ class _CalcPageState extends State<CalcPage> {
                   onEqual ? result : displayExpression,
                   textAlign: TextAlign.right,
                   style: TextStyle(
+                      fontFamily: 'Helvetica',
                       fontWeight: FontWeight.w500,
                       color: Colors.white,
                       fontSize: evalFontSize(result)),
@@ -178,6 +179,7 @@ class _CalcPageState extends State<CalcPage> {
                     onEqual ? result : displayExpression,
                     textAlign: TextAlign.right,
                     style: TextStyle(
+                        fontFamily: "Helvetica",
                         fontWeight: FontWeight.w500,
                         color: Colors.white,
                         fontSize: evalFontSize(evalExpression)),

@@ -66,6 +66,7 @@ class _NumbersButtonState extends State<NumbersButton>
           child: Text(
             widget.number,
             style: const TextStyle(
+              fontFamily: 'Helvetica',
               fontWeight: FontWeight.normal,
               color: Colors.white70,
               fontSize: 35,
