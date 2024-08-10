@@ -59,7 +59,7 @@ class _ViewRecordsState extends State<ViewRecords> {
                 child: ListView.builder(
                     itemCount: db.records.length,
                     itemBuilder: (context, index) {
-                      if (db.records[index].length == 2) {
+                      if (db.records[index].length == 3) {
                         return Padding(
                           padding: const EdgeInsets.only(
                               left: 10, right: 10, bottom: 10),
@@ -68,6 +68,7 @@ class _ViewRecordsState extends State<ViewRecords> {
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.grey.shade900),
                             child: ListTile(
+                                trailing: Text(db.records[index][2]),
                                 titleTextStyle: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
@@ -75,7 +76,9 @@ class _ViewRecordsState extends State<ViewRecords> {
                                 subtitleTextStyle:
                                     const TextStyle(color: Colors.white),
                                 title: Text(db.records[index][0]),
-                                subtitle: Text(db.records[index][1])),
+                                subtitle: Text(
+                                  db.records[index][1],
+                                )),
                           ),
                         );
                       } else {

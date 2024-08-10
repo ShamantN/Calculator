@@ -54,7 +54,14 @@ class _CalcPageState extends State<CalcPage> {
   }
 
   void writeData(String exp, String res) {
-    cdb.records.add([exp, res]);
+    DateTime now = DateTime.now();
+    cdb.records.add([
+      exp,
+      res,
+      DateTime(now.year, now.month, now.day, now.hour, now.minute)
+          .toString()
+          .substring(0, 16)
+    ]);
     cdb.writeRecord();
   }
 
