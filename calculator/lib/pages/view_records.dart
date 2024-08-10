@@ -1,4 +1,4 @@
-import 'package:calculator/calc_database.dart';
+import 'package:calculator/database/calc_database.dart';
 import 'package:calculator/pages/calc_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';

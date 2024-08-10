@@ -1,4 +1,4 @@
-import 'package:calculator/calc_database.dart';
+import 'package:calculator/database/calc_database.dart';
 import 'package:calculator/pages/numbers_button.dart';
 import 'package:calculator/pages/view_records.dart';
 import 'package:flutter/material.dart';
@@ -116,6 +116,8 @@ class _CalcPageState extends State<CalcPage> {
         backgroundColor: Colors.transparent,
         actions: [
           PopupMenuButton<String>(
+              clipBehavior: Clip.hardEdge,
+              color: Colors.grey.shade700,
               icon: const Icon(
                 Icons.more_vert,
                 color: Colors.white70,
@@ -133,7 +135,8 @@ class _CalcPageState extends State<CalcPage> {
                         padding: EdgeInsets.only(left: 18.0),
                         child: Text(
                           "History",
-                          style: TextStyle(fontSize: 16),
+                          style:
+                              TextStyle(fontSize: 16, fontFamily: 'Helvetica'),
                         ),
                       ))
                 ];
@@ -240,8 +243,9 @@ class _CalcPageState extends State<CalcPage> {
                     radius: 45,
                     backgroundColor: Colors.grey.shade700,
                     child: const Icon(
-                      Icons.backspace,
+                      Icons.backspace_outlined,
                       color: Colors.white70,
+                      size: 28,
                     ),
                   ),
                 ),
