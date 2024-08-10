@@ -209,7 +209,11 @@ class _CalcPageState extends State<CalcPage> {
                     }
                   });
                 },
-                child: GestureDetector(
+                child: InkWell(
+                  //radius: 30,
+                  borderRadius: BorderRadius.circular(42),
+                  highlightColor: Colors.purple,
+                  splashColor: Colors.red,
                   onTap: () {
                     if (evalExpression.isEmpty && displayExpression.isEmpty) {
                       HapticFeedback.heavyImpact();
