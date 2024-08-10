@@ -319,7 +319,7 @@ class _CalcPageState extends State<CalcPage> {
                   onTap: () {
                     addToExpression("-");
                   },
-                  number: "-",
+                  number: "−",
                   backgroundColor: Colors.orange),
             ],
           ),
