@@ -70,12 +70,17 @@ class _ViewRecordsState extends State<ViewRecords> {
                             child: ListTile(
                                 trailing: Text(db.records[index][2]),
                                 titleTextStyle: const TextStyle(
-                                    color: Colors.white,
+                                    fontFamily: 'Helvetica',
+                                    color: Colors.white70,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18),
-                                subtitleTextStyle:
-                                    const TextStyle(color: Colors.white),
-                                title: Text(db.records[index][0]),
+                                subtitleTextStyle: const TextStyle(
+                                    fontFamily: 'Helvetica',
+                                    color: Colors.white70),
+                                title: Padding(
+                                  padding: const EdgeInsets.only(bottom: 5),
+                                  child: Text(db.records[index][0]),
+                                ),
                                 subtitle: Text(
                                   db.records[index][1],
                                 )),

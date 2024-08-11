@@ -113,6 +113,7 @@ class _CalcPageState extends State<CalcPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         actions: [
           PopupMenuButton<String>(
