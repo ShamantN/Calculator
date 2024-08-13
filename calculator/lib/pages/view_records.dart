@@ -42,6 +42,7 @@ class _ViewRecordsState extends State<ViewRecords> {
                 onPressed: () {
                   setState(() {
                     db.records.clear();
+                    db.reversedRecords.clear();
                     recordsBox.clear();
                     db.writeRecord();
                   });
@@ -54,12 +55,12 @@ class _ViewRecordsState extends State<ViewRecords> {
           backgroundColor: Colors.transparent,
         ),
         backgroundColor: Colors.black,
-        body: db.records.isNotEmpty
+        body: db.reversedRecords.isNotEmpty
             ? Expanded(
                 child: ListView.builder(
-                    itemCount: db.records.length,
+                    itemCount: db.reversedRecords.length,
                     itemBuilder: (context, index) {
-                      if (db.records[index].length == 3) {
+                      if (db.reversedRecords[index].length == 3) {
                         return Padding(
                           padding: const EdgeInsets.only(
                               left: 10, right: 10, bottom: 10),
@@ -68,7 +69,7 @@ class _ViewRecordsState extends State<ViewRecords> {
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.grey.shade900),
                             child: ListTile(
-                                trailing: Text(db.records[index][2]),
+                                trailing: Text(db.reversedRecords[index][2]),
                                 titleTextStyle: const TextStyle(
                                     fontFamily: 'Helvetica',
                                     color: Colors.white70,
@@ -79,10 +80,10 @@ class _ViewRecordsState extends State<ViewRecords> {
                                     color: Colors.white70),
                                 title: Padding(
                                   padding: const EdgeInsets.only(bottom: 5),
-                                  child: Text(db.records[index][0]),
+                                  child: Text(db.reversedRecords[index][0]),
                                 ),
                                 subtitle: Text(
-                                  db.records[index][1],
+                                  db.reversedRecords[index][1],
                                 )),
                           ),
                         );
@@ -92,7 +93,7 @@ class _ViewRecordsState extends State<ViewRecords> {
                     }))
             : const Center(
                 child: Text(
-                  "No Records Available!",
+                  "There's no history yet.",
                   style: TextStyle(color: Colors.white70),
                 ),
               ));
