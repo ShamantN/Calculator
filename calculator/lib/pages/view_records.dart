@@ -44,7 +44,6 @@ class _ViewRecordsState extends State<ViewRecords> {
                     db.records.clear();
                     db.reversedRecords.clear();
                     recordsBox.clear();
-                    db.writeRecord();
                   });
                 },
                 icon: const Icon(

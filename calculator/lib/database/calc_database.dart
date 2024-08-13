@@ -12,7 +12,7 @@ class CalcDatabase {
   }
 
   void readRecords() {
-    records = calcBox.get("CALC_RECORD");
+    records = calcBox.get("CALC_RECORD", defaultValue: []);
     reversedRecords = records.reversed.toList();
   }
 
