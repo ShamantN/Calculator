@@ -91,9 +91,19 @@ class _ViewRecordsState extends State<ViewRecords> {
                       }
                     }))
             : const Center(
-                child: Text(
-                  "There's no history yet.",
-                  style: TextStyle(color: Colors.white70),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.history,
+                      color: Colors.white70,
+                      semanticLabel: "No History",
+                    ),
+                    Text(
+                      "There's no history yet.",
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                  ],
                 ),
               ));
   }
