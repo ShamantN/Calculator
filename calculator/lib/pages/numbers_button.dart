@@ -63,13 +63,16 @@ class _NumbersButtonState extends State<NumbersButton>
         child: CircleAvatar(
           radius: 45,
           backgroundColor: widget.backgroundColor,
-          child: Text(
-            widget.number,
-            style: const TextStyle(
-              fontFamily: 'Helvetica',
-              fontWeight: FontWeight.normal,
-              color: Colors.white70,
-              fontSize: 35,
+          child: Center(
+            child: Text(
+              widget.number,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontFamily: 'Helvetica',
+                fontWeight: FontWeight.normal,
+                color: Colors.white70,
+                fontSize: 35,
+              ),
             ),
           ),
         ),

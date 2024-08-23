@@ -374,9 +374,9 @@ class _CalcPageState extends State<CalcPage> {
             children: [
               NumbersButton(
                   onTap: () {
-                    addToExpression("00");
+                    addToExpression("^");
                   },
-                  number: "00",
+                  number: "^",
                   backgroundColor: const Color.fromARGB(255, 29, 29, 29)),
               const SizedBox(width: 10),
               NumbersButton(

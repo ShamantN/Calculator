@@ -66,9 +66,14 @@ class _ViewRecordsState extends State<ViewRecords> {
                           child: Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Colors.grey.shade900),
+                                color: const Color.fromARGB(255, 21, 21, 21)),
                             child: ListTile(
-                                trailing: Text(db.reversedRecords[index][2]),
+                                trailing: Text(
+                                  db.reversedRecords[index][2],
+                                  style: TextStyle(
+                                      color: const Color.fromARGB(
+                                          255, 85, 85, 85)),
+                                ),
                                 titleTextStyle: const TextStyle(
                                     fontFamily: 'Helvetica',
                                     color: Colors.white70,
@@ -97,7 +102,6 @@ class _ViewRecordsState extends State<ViewRecords> {
                     Icon(
                       Icons.history,
                       color: Colors.white70,
-                      semanticLabel: "No History",
                     ),
                     Text(
                       "There's no history yet.",
